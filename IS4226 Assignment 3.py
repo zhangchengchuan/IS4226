@@ -21,6 +21,7 @@ def get_technicals(stock, start, end):
     df['SMA10'] = df['close'].rolling(window=10).mean()
     df['SMA20'] = df['close'].rolling(window=20).mean()
     df['SMA50'] = df['close'].rolling(window=50).mean()
+    print(df.columns)
     df.dropna()
     print(df[['volatility_atr', 'momentum_rsi', 'SMA20', 'SMA10', 'SMA50']])
 
